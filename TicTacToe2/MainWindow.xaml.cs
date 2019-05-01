@@ -225,5 +225,27 @@ namespace TicTacToe2
         {
             ResetGame();
         }
+
+        private void Window_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void QuitGame_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OpponentToggle_Click(object sender, RoutedEventArgs e)
+        {
+            if (OpponentToggle.Content.ToString() == "2 Player Game")
+            {
+                OpponentToggle.Content = "CPU Game";
+            }
+            else
+            {
+                OpponentToggle.Content = "2 Player Game";
+            }
+        }
     }
 }
