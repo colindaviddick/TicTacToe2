@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="500" Background="DarkSlateBlue">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="SlateBlue"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="100"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel Width="300" Height="450" Margin="25 10 10 0">
+            <Border Background="GhostWhite" CornerRadius="15" Margin="0 5 0 15">
+                <DockPanel Margin="5">
+                    <TextBlock Name="XScores" Height="24" HorizontalAlignment="Left" Margin="5 2 0 5" Text="X Score: "/>
+                    <TextBlock Name="OScores" Height="24" HorizontalAlignment="Right" Margin="0 2 5 5" Text="O Score: "/>
+                </DockPanel>
+            </Border>
+
+            <DockPanel>
+                <Button Name="Box1" Click="Box1_Click" Content=" "/>
+                <Button Name="Box2" Click="Box2_Click" Content=" "/>
+                <Button Name="Box3" Click="Box3_Click" Content=" "/>
+            </DockPanel>
+            <DockPanel>
+                <Button Name="Box4" Click="Box4_Click" Content=" "/>
+                <Button Name="Box5" Click="Box5_Click" Content=" "/>
+                <Button Name="Box6" Click="Box6_Click" Content=" "/>
+            </DockPanel>
+            <DockPanel>
+                <Button Name="Box7" Click="Box7_Click" Content=" "/>
+                <Button Name="Box8" Click="Box8_Click" Content=" "/>
+                <Button Name="Box9" Click="Box9_Click" Content=" "/>
+            </DockPanel>
+            <Border Background="GhostWhite" CornerRadius="15" Margin="5">
+                <TextBlock Name="CurrentPlayer" Height="24" HorizontalAlignment="Center" Margin="5" Text="Current Player:"/>
+            </Border>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Margin="0 0 0 38">
+            <Button Name="ResetScores" Content="Reset&#xD;&#xA;Scores" Height="80" VerticalAlignment="Bottom" FontSize="20" Margin="0 0 0 10" Click="ResetScores_Click"/>
+            <Button Name="ResetGameButton" Content="Restart&#xD;&#xA;Game" Height="80" VerticalAlignment="Bottom" FontSize="20" Click="ResetGame_Click"/>
+            <Border Background="SlateBlue" CornerRadius="15" Width="130" Margin="10">
+                <TextBlock Text="The objective of TicTacToe is to get your marker (either X or O,) into a row of 3." TextWrapping="Wrap" FontSize="16" Margin="3"/>
+            </Border>
+        </StackPanel>
+    </DockPanel>
+
 </Window>
