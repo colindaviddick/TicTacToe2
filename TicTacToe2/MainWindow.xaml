@@ -72,7 +72,7 @@
             <Button Name="ResetScores" Content="Reset&#xD;&#xA;Scores" Height="50" VerticalAlignment="Bottom" FontSize="15" Margin="10" Click="ResetScores_Click"/>
             <Button Name="ResetGameButton" Content="Restart&#xD;&#xA;Game" Height="50" VerticalAlignment="Bottom" FontSize="15" Click="ResetGame_Click"/>
             <Border Background="SlateBlue" CornerRadius="15" Width="130" Margin="10">
-                <TextBlock Text="The objective of TicTacToe is to get your marker (either X or O,) into a row of 3." TextWrapping="Wrap" FontSize="16" Margin="3"/>
+                <TextBlock Text="The objective of TicTacToe is to get your marker (either X or O,) into a row of 3." TextWrapping="Wrap" FontSize="16" Margin="3"  ToolTip="Created by Colin Dick"/>
             </Border>
         </StackPanel>
     </DockPanel>
